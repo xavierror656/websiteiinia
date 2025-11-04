@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import SiteHeader from '../components/SiteHeader';
 import initLandingPage from '../landingPage';
+import { asset } from '../utils/asset';
 
 const AgentPage = () => {
   useEffect(() => {
@@ -12,13 +13,12 @@ const AgentPage = () => {
 
   return (
     <div className="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
-      <div className="tw-absolute tw-inset-0 tw--z-10 tw-bg-gradient-to-br tw-from-[#dbeafe] tw-via-white tw-to-[#eef2ff] dark:tw-from-[#111827] dark:tw-via-[#0f172a] dark:tw-to-[#111827]"></div>
-
       <SiteHeader />
 
-      <main className="tw-mx-auto tw-flex tw-w-[92%] tw-max-w-6xl tw-flex-1 tw-flex-col tw-gap-16 tw-pt-32 tw-pb-20">
-        <section className="tw-grid tw-gap-10 lg:tw-grid-cols-[1.2fr,1fr]">
-          <article className="tw-flex tw-flex-col tw-gap-6">
+      <main className="tw-mx-auto tw-w-[92%] tw-max-w-6xl tw-space-y-24 tw-pt-32 tw-pb-24">
+        <section className="tw-grid tw-gap-10 lg:tw-grid-cols-[1.2fr,1fr] tw-relative">
+          <div className="purple-bg-grad tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"></div>
+          <article className="tw-flex tw-flex-col tw-gap-6 reveal-up">
             <span className="tw-inline-flex tw-w-fit tw-rounded-full tw-bg-[#e0f2fe] tw-px-4 tw-py-2 tw-text-xs tw-font-semibold tw-uppercase tw-tracking-[0.4em] tw-text-[#0f172a] dark:tw-bg-[#1e293b] dark:tw-text-[#93c5fd]">
               Conversational AI
             </span>
@@ -43,7 +43,7 @@ const AgentPage = () => {
             </div>
           </article>
 
-          <aside className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-8 tw-shadow-xl tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80">
+          <aside className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-8 tw-shadow-xl tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80 reveal-up">
             <h2 className="tw-text-2xl tw-font-semibold tw-text-[#0f172a] dark:tw-text-white">Capacidades clave</h2>
             <ul className="tw-mt-6 tw-space-y-5">
               <li className="tw-flex tw-gap-3">
@@ -103,20 +103,21 @@ const AgentPage = () => {
           </aside>
         </section>
 
-        <section className="tw-grid tw-gap-8 lg:tw-grid-cols-3">
-          <div className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-6 tw-shadow-lg tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80">
+        <section className="tw-grid tw-gap-8 lg:tw-grid-cols-3 tw-relative">
+          <div className="purple-bg-grad tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"></div>
+          <div className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-6 tw-shadow-lg tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80 reveal-up">
             <h3 className="tw-text-lg tw-font-semibold tw-text-[#0f172a] dark:tw-text-white">Orquestación multi-modelo</h3>
             <p className="tw-mt-3 tw-text-sm tw-text-gray-600 dark:tw-text-gray-300">
               Alterna entre modelos según el contexto, combina APIs y agrega reglas de negocio sin escribir código repetitivo.
             </p>
           </div>
-          <div className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-6 tw-shadow-lg tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80">
+          <div className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-6 tw-shadow-lg tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80 reveal-up">
             <h3 className="tw-text-lg tw-font-semibold tw-text-[#0f172a] dark:tw-text-white">Controles de seguridad</h3>
             <p className="tw-mt-3 tw-text-sm tw-text-gray-600 dark:tw-text-gray-300">
               Define filtros de contenido, auditorías y capas de aprobación antes de responder a tus usuarios finales.
             </p>
           </div>
-          <div className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-6 tw-shadow-lg tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80">
+          <div className="tw-rounded-3xl tw-border tw-border-white/60 tw-bg-white/70 tw-p-6 tw-shadow-lg tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#111827]/80 reveal-up">
             <h3 className="tw-text-lg tw-font-semibold tw-text-[#0f172a] dark:tw-text-white">Insights accionables</h3>
             <p className="tw-mt-3 tw-text-sm tw-text-gray-600 dark:tw-text-gray-300">
               Visualiza resultados, identifica oportunidades de mejora y replica agentes exitosos en cuestión de minutos.
@@ -125,18 +126,17 @@ const AgentPage = () => {
         </section>
       </main>
 
-      <footer className="tw-border-t tw-border-white/40 tw-bg-white/70 tw-py-8 tw-text-sm tw-text-gray-600 tw-backdrop-blur-lg dark:tw-border-white/10 dark:tw-bg-[#0f172a]/70 dark:tw-text-gray-300">
-        <div className="tw-mx-auto tw-flex tw-w-[92%] tw-max-w-6xl tw-flex-col tw-gap-3 sm:tw-flex-row sm:tw-items-center sm:tw-justify-between">
-          <span>© {new Date().getFullYear()} Pixa Agent. Todos los derechos reservados.</span>
-          <div className="tw-flex tw-gap-4">
-            <Link to="/" className="header-links !tw-text-[#0f172a] dark:!tw-text-white">
-              Volver al inicio
-            </Link>
-            <a href="#request-demo" className="header-links !tw-text-[#0f172a] dark:!tw-text-white">
-              Contacto
-            </a>
-          </div>
+      <footer className="tw-flex tw-flex-col tw-items-center tw-gap-4 tw-text-center tw-text-xs tw-text-[#475569] dark:tw-text-slate-400 reveal-up">
+        <div className="tw-flex tw-items-center tw-gap-3">
+          <span className="tw-flex tw-h-9 tw-w-9 tw-items-center tw-justify-center tw-rounded-xl tw-bg-white tw-text-[#0f172a] tw-shadow-sm dark:tw-bg-white/10 dark:tw-text-white">
+            <i className="bi bi-robot" />
+          </span>
+          <span className="tw-font-medium">IINIA Agent Suite</span>
         </div>
+        <p className="tw-max-w-2xl tw-text-xs tw-text-justify tw-text-[#64748b] dark:tw-text-slate-400">
+          Agentes conversacionales inteligentes con orquestación multi-modelo, memoria persistente y integración nativa con sistemas empresariales.
+        </p>
+        <span>© {new Date().getFullYear()} IINIA. Hecho con React, Tailwind y bootstrap icons.</span>
       </footer>
     </div>
   );
