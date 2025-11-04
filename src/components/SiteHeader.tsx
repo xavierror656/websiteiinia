@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 
+import { asset } from '../utils/asset';
+
 const SiteHeader = () => {
   const location = useLocation();
 
@@ -14,7 +16,7 @@ const SiteHeader = () => {
       <Link className="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" to="/">
         <div className="tw-h-[30px] tw-max-w-[100px]">
           <img
-            src="/assets/logo/logo.png"
+            src={asset('assets/logo/logo.png')}
             alt="logo"
             className="tw-object-contain tw-h-full tw-w-full dark:tw-invert"
           />

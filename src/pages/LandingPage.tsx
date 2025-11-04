@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import SiteHeader from '../components/SiteHeader';
 import initLandingPage from '../landingPage';
+import { asset } from '../utils/asset';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -136,11 +137,11 @@ const LandingPage = () => {
 
                                           <div className="tw-flex tw-gap-1 tw-place-items-center">
                                               <div className="tw-flex tw--space-x-4">
-                                                  <img className="tw-z-10 tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src="/assets/images/people/man.jpg" alt="Avatar 1" />
-                                                  <img className="tw-z-[4] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src="/assets/images/people/women.jpg" alt="Avatar 2" />
-                                                  <img className="tw-z-[3] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src="/assets/images/people/man2.jpg" alt="Avatar 3" />
-                                                  <img className="tw-z-[2] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src="/assets/images/people/man.jpg" alt="Avatar 4" />
-                                                  <img className="tw-z-[1] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src="/assets/images/people/women.jpg" alt="Avatar 5" />
+                                                  <img className="tw-z-10 tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src={asset('assets/images/people/man.jpg')} alt="Avatar 1" />
+                                                  <img className="tw-z-[4] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src={asset('assets/images/people/women.jpg')} alt="Avatar 2" />
+                                                  <img className="tw-z-[3] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src={asset('assets/images/people/man2.jpg')} alt="Avatar 3" />
+                                                  <img className="tw-z-[2] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src={asset('assets/images/people/man.jpg')} alt="Avatar 4" />
+                                                  <img className="tw-z-[1] tw-w-10 tw-h-10 tw-object-cover tw-rounded-full tw-border-2 tw-border-white" src={asset('assets/images/people/women.jpg')} alt="Avatar 5" />
                                               </div>
                                               <p>+20,000</p>
                                           </div>
@@ -160,7 +161,7 @@ const LandingPage = () => {
                                     
                                           <div className="tw-h-[30px] tw-w-fit tw-max-w-[100px]">
                                               <img
-                                                  src="/assets/logo/logo.png"
+                                                  src={asset('assets/logo/logo.png')}
                                                   alt="logo"
                                                   className="tw-object-contain tw-opacity-80 tw-h-full tw-w-full dark:tw-invert"
                                               />
@@ -205,7 +206,7 @@ const LandingPage = () => {
                                       <div className="tw-flex tw-w-full tw-p-4 tw-bg-white dark:tw-bg-black tw-h-full tw-flex-col" id="pixa-playground">
                                           <div className="tw-relative tw-w-full tw-flex tw-place-content-center tw-h-full">
                                               <div className="tw-absolute tw-top-[20%] max-lg:tw-top-[30%] tw-left-1/2 tw--translate-x-1/2  tw-w-[150px] tw-h-[150px]">
-                                                  <img src="/assets/logo/logo.png" className="tw-w-full tw-h-full dark:tw-invert tw-object-contain tw-opacity-20"
+                                                  <img src={asset('assets/logo/logo.png')} className="tw-w-full tw-h-full dark:tw-invert tw-object-contain tw-opacity-20"
                                                       alt="Pixa logo" />
                                               </div>
                                               <div className="prompt-container tw-overflow-y-auto tw-px-[5%] max-lg:tw-px-2 scrollbar max-lg:tw-max-h-[80%] tw-max-h-[550px] 
@@ -236,7 +237,7 @@ const LandingPage = () => {
                                                       >
                                                           <span className="tw-flex tw-w-fit tw-gap-2 tw-place-items-center">
                                                               <div className="tw-w-[20px] tw-h-[20px]">
-                                                                  <img src="/assets/images/brand-logos/openai.svg" 
+                                                                  <img src={asset('assets/images/brand-logos/openai.svg')} 
                                                                       alt="Gpt3.5" className="dropdown-select-icon dark:tw-invert" />
                                                               </div>
                                                               <span className="dropdown-select-text">GPT 4o</span>
@@ -249,7 +250,7 @@ const LandingPage = () => {
                                                       <ul className="dropdown-menu tw-shadow-md tw-bottom-[50px] max-lg:tw-top-[105%] max-lg:tw-bottom-[unset]">
                                                           <li className="tw-flex tw-gap-2 tw-place-items-center">
                                                               <div className="tw-w-[20px] tw-h-[20px]">
-                                                                  <img src="/assets/images/brand-logos/openai.svg" alt="Gpt-4o" 
+                                                                  <img src={asset('assets/images/brand-logos/openai.svg')} alt="Gpt-4o" 
                                                                           className="dropdown-menu-icon dark:tw-invert" />
                                                               </div>
                                                               <span className="dropdown-text">GPT 4o</span>
@@ -257,21 +258,21 @@ const LandingPage = () => {
                                                     
                                                           <li className="tw-flex tw-gap-2 tw-place-items-center">
                                                               <div className="tw-w-[20px] tw-h-[20px]">
-                                                                  <img src="/assets/images/brand-logos/googlegemini.svg" alt="Gemini" 
+                                                                  <img src={asset('assets/images/brand-logos/googlegemini.svg')} alt="Gemini" 
                                                                   className="dropdown-menu-icon dark:tw-invert" />
                                                               </div>
                                                               <span className="dropdown-text">Gemini</span>
                                                           </li>
                                                           <li className="tw-flex tw-gap-2 tw-place-items-center">
                                                               <div className="tw-w-[20px] tw-h-[20px]">
-                                                                  <img src="/assets/images/brand-logos/meta.svg" alt="Llama" 
+                                                                  <img src={asset('assets/images/brand-logos/meta.svg')} alt="Llama" 
                                                                           className="dropdown-menu-icon dark:tw-invert" />
                                                               </div>
                                                               <span className="dropdown-text">Llama 3</span>
                                                           </li>
                                                           <li className="tw-flex tw-gap-2 tw-place-items-center">
                                                               <div className="tw-w-[20px] tw-h-[20px]">
-                                                                  <img src="/assets/images/brand-logos/claude.svg" alt="Perplexity" 
+                                                                  <img src={asset('assets/images/brand-logos/claude.svg')} alt="Perplexity" 
                                                                       className="dropdown-menu-icon dark:tw-invert" />
                                                               </div>
                                                               <span className="dropdown-text">Claude</span>
@@ -310,7 +311,7 @@ const LandingPage = () => {
                     
                           <div className="carousel-img tw-h-[30px] tw-w-[150px]">
                               <img
-                                  src="/assets/images/brand-logos/google.svg"
+                                  src={asset('assets/images/brand-logos/google.svg')}
                                   alt="Google"
                                   className="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
                                   srcSet=""
@@ -318,7 +319,7 @@ const LandingPage = () => {
                           </div>
                           <div className="carousel-img tw-h-[30px] tw-w-[150px]">
                               <img
-                                  src="/assets/images/brand-logos/microsoft.svg"
+                                  src={asset('assets/images/brand-logos/microsoft.svg')}
                                   alt="Microsoft"
                                   className="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
                                   srcSet=""
@@ -326,7 +327,7 @@ const LandingPage = () => {
                           </div>
                           <div className="carousel-img tw-h-[30px] tw-w-[150px]">
                               <img
-                                  src="/assets/images/brand-logos/adobe.svg"
+                                  src={asset('assets/images/brand-logos/adobe.svg')}
                                   alt="Adobe"
                                   className="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
                                   srcSet=""
@@ -334,7 +335,7 @@ const LandingPage = () => {
                           </div>
                           <div className="carousel-img tw-h-[30px] tw-w-[150px]">
                               <img
-                                  src="/assets/images/brand-logos/airbnb.svg"
+                                  src={asset('assets/images/brand-logos/airbnb.svg')}
                                   alt="Airbnb"
                                   className="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
                                   srcSet=""
@@ -342,7 +343,7 @@ const LandingPage = () => {
                           </div>
                           <div className="carousel-img tw-h-[30px] tw-w-[150px]">
                               <img
-                                  src="/assets/images/brand-logos/stripe.svg"
+                                  src={asset('assets/images/brand-logos/stripe.svg')}
                                   alt="Stripe"
                                   className="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
                                   srcSet=""
@@ -350,7 +351,7 @@ const LandingPage = () => {
                           </div>
                           <div className="carousel-img tw-h-[30px] tw-w-[150px]">
                               <img
-                                  src="/assets/images/brand-logos/reddit.svg"
+                                  src={asset('assets/images/brand-logos/reddit.svg')}
                                   alt="Reddit"
                                   className="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
                                   srcSet=""
@@ -419,7 +420,7 @@ const LandingPage = () => {
                                       tw-flex-col tw-w-full tw-h-full  tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
                                       hover:tw-scale-[1.02]">
                                       <div className="tw-overflow-hidden tw-w-full tw-min-h-[180px] tw-h-[180px]">
-                                          <img src="/assets/images/home/api.png" className="tw-w-full tw-object-contain tw-h-auto" 
+                                          <img src={asset('assets/images/home/api.png')} className="tw-w-full tw-object-contain tw-h-auto" 
                                               alt="unified interface" />
                                     
                                       </div>
@@ -440,7 +441,7 @@ const LandingPage = () => {
                                       tw-flex-col tw-w-full tw-h-full  tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
                                       hover:tw-scale-[1.02]">
                                       <div className="tw-w-full tw-min-h-[180px] tw-h-[180px] tw-overflow-hidden">
-                                          <img src="/assets/images/home/api.png" 
+                                          <img src={asset('assets/images/home/api.png')} 
                                               alt="API" className="tw-w-full tw-h-auto tw-object-contain" />
                                     
                                       </div>
@@ -461,7 +462,7 @@ const LandingPage = () => {
                                       tw-flex-col tw-w-full tw-h-full  tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
                                       hover:tw-scale-[1.02]">
                                       <div className="tw-w-full tw-flex tw-place-contet-center tw-min-h-[180px] tw-h-[180px] tw-rounded-xl tw-overflow-hidden">
-                                          <img src="/assets/images/home/integrations1.png" className="tw-w-full tw-h-auto tw-object-contain" 
+                                          <img src={asset('assets/images/home/integrations1.png')} className="tw-w-full tw-h-auto tw-object-contain" 
                                                   alt="Prebuilt integrations" />
                                       </div>
                                       <h2 className="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Pre-built Tools</h2>
@@ -481,7 +482,7 @@ const LandingPage = () => {
                                   max-md:tw-flex-col tw-w-full tw-h-full  tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
                                   hover:tw-scale-[1.02]">
                                   <div className="tw-text-6xl tw-overflow-hidden tw-rounded-xl tw-w-full tw-h-full max-md:tw-h-[180px]">
-                                      <img src="/assets/images/home/ai-models.png" className="tw-w-full tw-object-contain tw-h-full" 
+                                      <img src={asset('assets/images/home/ai-models.png')} className="tw-w-full tw-object-contain tw-h-full" 
                                           alt="AI models" />
                                 
                                   </div>
@@ -727,7 +728,7 @@ const LandingPage = () => {
                                           tw-rounded-xl 
                                            tw-backdrop-blur-2xl
                                            tw-overflow-hidden tw-flex tw-place-content-center">
-                                  <img src="/assets/images/home/prompts2.png" 
+                                  <img src={asset('assets/images/home/prompts2.png')} 
                                           alt="Prompt library" className="tw-w-auto tw-h-full tw-object-contain" />
                               </div>
                               <h3 className="tw-text-2xl">
@@ -747,7 +748,7 @@ const LandingPage = () => {
                                           tw-rounded-xl 
                                            tw-backdrop-blur-2xl
                                            tw-overflow-hidden tw-flex tw-place-content-center">
-                                  <img src="/assets/images/home/search.png" 
+                                  <img src={asset('assets/images/home/search.png')} 
                                           alt="Web search" className="tw-w-auto tw-h-full tw-object-contain" />
                               </div>
                               <h3 className="tw-text-2xl">
@@ -766,7 +767,7 @@ const LandingPage = () => {
                                           tw-rounded-xl 
                                            tw-backdrop-blur-2xl
                                            tw-overflow-hidden tw-flex tw-place-content-center">
-                                  <img src="/assets/images/home/image.png" 
+                                  <img src={asset('assets/images/home/image.png')} 
                                           alt="Image generation" className="tw-w-auto tw-h-full tw-object-contain" />
                               </div>
                               <h3 className="tw-text-2xl">
@@ -785,7 +786,7 @@ const LandingPage = () => {
                                            tw-rounded-xl 
                                            tw-backdrop-blur-2xl
                                            tw-overflow-hidden tw-flex tw-place-content-center">
-                                  <img src="/assets/images/home/history.png" 
+                                  <img src={asset('assets/images/home/history.png')} 
                                           alt="History" className="tw-w-auto tw-h-full tw-object-contain" />
                               </div>
                               <h3 className="tw-text-2xl">
@@ -805,7 +806,7 @@ const LandingPage = () => {
                                           tw-rounded-xl 
                                            tw-backdrop-blur-2xl
                                            tw-overflow-hidden tw-flex tw-place-content-center">
-                                  <img src="/assets/images/home/import.png" 
+                                  <img src={asset('assets/images/home/import.png')} 
                                           alt="Import content" className="tw-w-auto tw-h-full tw-object-contain" />
                               </div>
                               <h3 className="tw-text-2xl">
@@ -824,7 +825,7 @@ const LandingPage = () => {
                                           tw-rounded-xl 
                                            tw-backdrop-blur-2xl
                                            tw-overflow-hidden tw-flex tw-place-content-center">
-                                  <img src="/assets/images/home/multilingual.png" 
+                                  <img src={asset('assets/images/home/multilingual.png')} 
                                           alt="Multilingual" className="tw-w-auto tw-h-full tw-object-contain" />
                               </div>
                               <h3 className="tw-text-2xl">
@@ -860,7 +861,7 @@ const LandingPage = () => {
                               className="reveal-up tw-flex tw-w-full tw-max-w-[650px] max-md:tw-max-w-full tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px]
                                   tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-2 tw-shadow-xl max-lg:tw-w-[320px]"
                                   >
-                              <img src="/assets/images/home/multi-sub.png" 
+                              <img src={asset('assets/images/home/multi-sub.png')} 
                                   alt="Multi sub" />
                           </div>
 
@@ -868,7 +869,7 @@ const LandingPage = () => {
                               className="reveal-up tw-flex tw-w-full tw-max-w-[650px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px]
                                   tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-2 tw-shadow-xl max-lg:tw-w-[320px]"
                                   >
-                              <img src="/assets/images/home/single-sub.jpg" 
+                              <img src={asset('assets/images/home/single-sub.jpg')} 
                                   alt="Single sub" />
                           </div>
 
@@ -905,7 +906,7 @@ const LandingPage = () => {
                                   className="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
                               >
                                   <img
-                                      src="/assets/images/people/man2.jpg"
+                                      src={asset('assets/images/people/man2.jpg')}
                                       className="tw-h-full tw-w-full tw-object-cover"
                                       alt="man"
                                   />
@@ -933,7 +934,7 @@ const LandingPage = () => {
                                   className="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
                               >
                                   <img
-                                      src="/assets/images/people/women.jpg"
+                                      src={asset('assets/images/people/women.jpg')}
                                       className="tw-h-full tw-w-full tw-object-cover"
                                       alt="women"
                                   />
@@ -961,7 +962,7 @@ const LandingPage = () => {
                                   className="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
                               >
                                   <img
-                                      src="/assets/images/people/man.jpg"
+                                      src={asset('assets/images/people/man.jpg')}
                                       className="tw-h-full tw-w-full tw-object-cover"
                                       alt="man"
                                   />
@@ -988,7 +989,7 @@ const LandingPage = () => {
                                   className="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
                               >
                                   <img
-                                      src="/assets/images/people/man2.jpg"
+                                      src={asset('assets/images/people/man2.jpg')}
                                       className="tw-h-full tw-w-full tw-object-cover"
                                       alt="man"
                                   />
@@ -1016,7 +1017,7 @@ const LandingPage = () => {
                                   className="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
                               >
                                   <img
-                                      src="/assets/images/people/women.jpg"
+                                      src={asset('assets/images/people/women.jpg')}
                                       className="tw-h-full tw-w-full tw-object-cover"
                                       alt="women"
                                   />
@@ -1044,7 +1045,7 @@ const LandingPage = () => {
                                   className="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
                               >
                                   <img
-                                      src="/assets/images/people/man.jpg"
+                                      src={asset('assets/images/people/man.jpg')}
                                       className="tw-h-full tw-w-full tw-object-cover"
                                       alt="man"
                                   />
@@ -1247,7 +1248,7 @@ const LandingPage = () => {
                               className="tw-h-[350px] tw-min-h-[350px] tw-w-full tw-overflow-hidden tw-rounded-2xl"
                           >
                               <img
-                                  src="/assets/images/home/article1.png"
+                                  src={asset('assets/images/home/article1.png')}
                                   alt="article image"
                                   className="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-700 hover:tw-scale-[1.3]"
                                   srcSet=""
@@ -1278,7 +1279,7 @@ const LandingPage = () => {
                               className="tw-h-[350px] tw-min-h-[350px] tw-w-full tw-overflow-hidden tw-rounded-2xl"
                           >
                               <img
-                                  src="/assets/images/home/article2.jpg"
+                                  src={asset('assets/images/home/article2.jpg')}
                                   alt="article image"
                                   className="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-700 hover:tw-scale-[1.3]"
                                   srcSet=""
@@ -1309,7 +1310,7 @@ const LandingPage = () => {
                               className="tw-h-[350px] tw-min-h-[350px] tw-w-full tw-overflow-hidden tw-rounded-2xl"
                           >
                               <img
-                                  src="/assets/images/home/article3.png"
+                                  src={asset('assets/images/home/article3.png')}
                                   alt="article image"
                                   className="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-700 hover:tw-scale-[1.3]"
                                   srcSet=""
@@ -1482,7 +1483,7 @@ const LandingPage = () => {
                       >   
                           <a href="#" className="tw-w-full tw-place-items-center tw-flex tw-flex-col tw-gap-6">
                               <img
-                                  src="/assets/logo/logo.png"
+                                  src={asset('assets/logo/logo.png')}
                                   alt="logo"
                                   srcSet=""
                                   className="tw-max-w-[120px] dark:tw-invert"

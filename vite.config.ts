@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-const repoName = 'websiteiinia';
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+const repoName =
+  process.env.GITHUB_REPOSITORY?.split('/')?.[1] ?? 'websiteiinia';
+const isGitHubPages = Boolean(process.env.GITHUB_REPOSITORY);
 
-export default defineConfig({
+export default defineConfig(() => ({
   base: isGitHubPages ? `/${repoName}/` : '/',
   plugins: [react()],
   server: {
     host: true
   }
-});
+}));
